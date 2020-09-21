@@ -5,14 +5,14 @@
 
 <ol>
 
-## <li>선언방식</li>
-## <li>기본 선택자</li>
-## <li>복합 선택자</li>
-## <li>가상 클래스 선택자</li>
-## <li>가상 요소 선택자</li>
-## <li>속성 선택자</li>
-## <li>상속</li>
-## <li>우선순위</li>
+## <li>[선언방식](#%EC%84%A0%EC%96%B8%EB%B0%A9%EC%8B%9D-1)</li>
+## <li>[기본 선택자](#%EA%B8%B0%EB%B3%B8-%EC%84%A0%ED%83%9D%EC%9E%90-basic-selectors)</li>
+## <li>[복합 선택자](#%EB%B3%B5%ED%95%A9-%EC%84%A0%ED%83%9D%EC%9E%90-1)</li>
+## <li>[가상 클래스 선택자](#%EA%B0%80%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%84%A0%ED%83%9D%EC%9E%90pseudo-classes-selectors)</li>
+## <li>[가상 요소 선택자](#%EA%B0%80%EC%83%81-%EC%9A%94%EC%86%8C-%EC%84%A0%ED%83%9D%EC%9E%90-pseudo-element-selectors)</li>
+## <li>[속성 선택자](#%EC%86%8D%EC%84%B1-%EC%84%A0%ED%83%9D%EC%9E%90-attribute-selectors)</li>
+## <li>[상속](#%EC%83%81%EC%86%8D-1)</li>
+## <li>[우선순위](#%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84-1)</li>
 
 
 </ol>
