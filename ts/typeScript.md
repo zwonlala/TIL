@@ -195,6 +195,84 @@ compile 시 제외할 파일을 명시
 
 ## 변수선언
 
+#### 변수 선언, 어떻게 타입이 지정되는지...?
+
+- **`var`** vs **`let`**   
+차이? **스코프**!   
+	 -	**`var`** : 함수 단위.  
+함수 내에서는 코드 어디에서든지 접근 가능!   
+Ex) if 문 안에 var 키워드 사용하여 변수 선언해도, 해당 함수 전체에서 해당 변수 사용 가능
+
+	 -	**`let`** : 블록 단위.  
+블록 안에서만 접근이 가능!
+
+	 -	TS 는 변수에 처음 값을 할당 할 경우 하나의 타입으로 지정됨.   
+&nbsp;&nbsp;&nbsp;&nbsp;후에 같은 타입으로 할당 -> 문제가 안됨!    
+&nbsp;&nbsp;&nbsp;&nbsp;But, 다른 타입으로 할당 -> error! 
+
+	 -	초기에 변수를 선언할 때    
+&nbsp;&nbsp;&nbsp;&nbsp;a. 바로 값을 할당  
+&nbsp;&nbsp;&nbsp;&nbsp;b. 바로 값을 할당 X  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> 기본적으로 any 타입이 됨!    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> 즉, 어떤 타입의 값도 저장할 수 있는 변수가 되는 것.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> 다른 타입의 변수 넣어도 에러나지 않음.  
+&nbsp;&nbsp;&nbsp;&nbsp;=> 이 경우, 타입 고정하고 싶으면 **`type-annotation`** 해주면 됨!       
+`let scroe: number;`
+
+
+<br>
+
+<details>
+<summary>var 헷갈리는 예제</summary>
+
+```javascript
+for (var i=0; i<3; i++) {
+  setTimeout(function() {
+    console.log(i);
+  }, 100);
+}
+```
+
+```
+//results
+3
+3
+3
+```
+</details>
+
+<details>
+<summary>위의 헷갈리는 예제 let 버젼</summary>
+
+
+```javascript
+for (let i=0; i<3; i++) {
+  setTimeout(function() {
+    console.log(i);
+  }, 100);
+}
+```
+
+```
+//results
+0
+1
+2
+```
+</details>
+
+
+  
+<br><br>
+ 
+
+- **`const`**  
+상수  
+-> 선언시 무조건 초기값을 설정해 줘야함!    
+&nbsp;&nbsp;&nbsp;&nbsp;∴ **`type-annotation`** 해주지 않아도 어떤 타입인지 바로 알 수 있다!   
+-> 재할당이 불가.  
+-> **`const`** 는 **`let`** 과 동일하게 블록 스코프 지님!
+
 <br>
 <br>
 <br>
