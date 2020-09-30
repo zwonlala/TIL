@@ -70,11 +70,78 @@
 &nbsp;&nbsp;&nbsp;  & 최신 JS 기능도 지원해서 컴파일을 통해 JS 파일을 만들어내는 하나의 PL      
 </b>
 
+<br>
+<br>
+<br>
+<br>
+
+
 ## 개발환경
+
+TS 컴파일러 - Node.js에서 구동
+
+VS Code 설치    
+&nbsp;&nbsp;&nbsp;&nbsp;-> 설정에서 'breadCrumbs' 검색 & 체크(활성화)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;파일 생성 시 상단에 네비게이션 생성
+
+Terminal  
+&nbsp;&nbsp;&nbsp;&nbsp;-> `npm install typescript -g` (전역으로 설치)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`sudo npm install typescript -g` (if MAC)
+
+TS 컴파일러는 `tsc`라는 명령어를 통해 실행시킬 수 있음
+
+<br>
+<br>
+<br>
+<br>
 
 ## 컴파일
 
+#### TS 컴파일러
+
+- 기본 사용법: `tsc [options] [file...]` *//options, file 위치 바뀌어도 ㄱㅊ*
+- 다양한 옵션 존재
+
+
+#### TS 컴파일러 옵션
+
+- **옵션 X**  
+같은 위치에 같은 이름의 JS 파일 생성  
+let 키워드 => var 키워드 (∵ 기본적으로 구형 브라우져도 지원되게 ES5로 구성)
+
+- **target 옵션**   
+`tsc hello.js --target es6`   
+es6나 다른 버젼의 JS 파일 만들때, `--target` 옵션 사용  
+
+- **lib 옵션**  
+Ex) *ES6에 기능적으로 추가된 Promise와 같은 새로운 타입을 ES5 코드로 바꾼다면...?*    
+-> error: 'Promise' only refuse to a type.... //Promise를 찾을 수 없다고 나옴<br>   
+Promise와 같은 것은 ES5에서 문법적이라기 보단, 새로운 기능(**새로운 타입**)이 추가된 것!!!    
+-> Promise를 지원하기 위해서는 별도의 폴리필?(라이브러리..?)이 필요!<br>    
+-> 해당 라이브러리를 \<script> 태그를 전역에 추가를 하기 때문에 hello.js가 동작하는데 아무 문제가 없다! 라고 TS에게 말해줄 수 있어야 하는게 그게바로 `--lib` 옵션.<br>   
+`tsc hello.js --lib es2015.promise`     
+`tsc hello.js --lib es5,es2015.promise,es2015.iterable, dom`<br>  
+∴ lib 옵션을 이용해서 전역이나 TS에서 쓰는 타입들이 어디까지가 제공되는지 컴파일러에게 말해줄 수 있음!  
+
+
+- **module 옵션**  
+모듈 시스템(ES6의 Module 시스템, CommonJS, RequireJS, ...)   
+어떠한 종류의 모듈 시스템 사용할 지 TS 컴파일 시 정의 가능 <br><br> 
+... 생략 ...<br>   
+∴ `--module` 옵션 사용하여서 원하는 모듈 시스템으로 변경하여 컴파일 된 JS 파일 생성할 수 있다!
+   
+
+<br>
+<br>
+<br>
+<br>
+
 ## 변수선언
+
+<br>
+<br>
+<br>
+<br>
 
 ## 기본 타입
  
