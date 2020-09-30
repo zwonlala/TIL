@@ -102,6 +102,7 @@ TS 컴파일러는 `tsc`라는 명령어를 통해 실행시킬 수 있음
 - 기본 사용법: `tsc [options] [file...]` *//options, file 위치 바뀌어도 ㄱㅊ*
 - 다양한 옵션 존재
 
+<br>
 
 #### TS 컴파일러 옵션
 
@@ -130,6 +131,62 @@ Promise와 같은 것은 ES5에서 문법적이라기 보단, 새로운 기능(*
 ... 생략 ...<br>   
 ∴ `--module` 옵션 사용하여서 원하는 모듈 시스템으로 변경하여 컴파일 된 JS 파일 생성할 수 있다!
    
+<br>
+
+#### TS 컴파일러 설정 파일
+
+tsconfig.json이라는 TS 컴파일러 설정 파일 생성
+
+JSON 형태로 설정을 주게 됨
+
+```JSON
+{
+  "include": ~~
+  "exclude": ~~
+  "compilerOptions": ~~
+}
+```
+
+<br>
+
+- "include"  
+compile 시 포함될 파일을 명시, 여러개의 파일 목록 줄 수 있음.    
+  
+```JSON
+"include": [
+  "src/**/*.ts" //src 폴더 안의 전체 TS 파일들
+], 
+```
+
+<br>
+
+- "exclude"   
+compile 시 제외할 파일을 명시
+
+```JSON
+"exclude": [
+  "node_modules" 
+  //일반적으로 Node.js 기반으로 만들기 때문에 npm init -y 로 프로젝트 생성하고, 
+  // 후에 설치하는 모듈들은 "node_modules" 디렉터리에 저장 
+  // -> 이 페키지들을 TS 컴파일 대상에서 제외
+],
+```
+
+<br>
+
+- "compilerOptions"   
+컴파일과 관련된 설정들    
+객체로 정의
+
+```JSON
+"compilerOptions": {
+  "module": "commonjs",
+  "rootDir": "src",
+  "outDir": "dist",
+  "target": "es5"
+}
+```
+
 
 <br>
 <br>
