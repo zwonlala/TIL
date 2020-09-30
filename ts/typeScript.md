@@ -279,4 +279,173 @@ for (let i=0; i<3; i++) {
 <br>
 
 ## 기본 타입
+
+TS는 JS 기본 타입 다 지원 +a 지원
+
+
+
+<div style="width:100%; height:100%; background-color:rgba(242, 243, 244, 0.7); display:flex; justify-contents: center; align-items:center;">
+	<div style="width:30%; height:100%; background-color:white; border-top-right-radius:30px; border-bottom-right-radius:30px;">
+
+- number
+- string
+- boolean
+- undefined
+- null
+- object
+- symbol 
+
+	</div>
+
+	<div style="width:70%; height:100%; padding-left:10px">
+	ES6 기준 총 7개 타입
+  
+	(6개의 원시타입(primitive type), 1개의 참조형 타입(reference type))
+	</div>
+</div>
+
+<br><br>
+
+
+```javascript
+let numberValue: number;
+let stringValue: string;
+let booleanValue: boolean;
+let undefinedValue: undefined;
+let nullValue: null;
+let objectValue: object;
+let symbolValue: Symbol;
+```
+
+#### - **`number`**
+숫자형 타입.  
+소숫점, 8진수/16진수 표현 가능
+
+<br>
+
+#### - **`string`**
+- 리터럴 표현.  
+""와 '' 사용 가능  
+개행 시 에러
+- (ES6) 템플릿 리터럴(string interpolation).  
+문자열 내 개행 넣을 수 있음  
+
+<br>
+
+#### - **`boolean`**
+true / false 만
+
+<br>
+
+#### - **`undefined`**
+undefinedValue에는 **`undefined`** 값과 **`null`** 값 줄 수 있음
+
+<br>
+
+#### - **`null`**
+
+**`undefined`** 와 **`null`** 은 모든 타입의 하위 타입.  
+-> 어떤 타입의 변수라도 **`undefined`** 와  **`null`** 할당할 수 있음!   
+(하위 타입은 상위 타입으로 정의된변수에 할당할 수 있다)
+
+\+ **`any`** 타입은 모든 타입의 상위 타입!   
+(**`any`**  타입의 변수에는 어떤 값도 할당할 수 있다)
+
+<br>
+
+#### - **`object`**
+**`object`** 타입으로 명시된 변수는 원시타입(primitive type)을 제외한 값들이 할당될 수 O.  
+
+ex) wrapper 타입
+
+```
+objectValue = String(33); //X
+objectValue = new String(33); //O (∵ 33 문자열이 아닌 객체!)
+```
+
+<br>
+
+#### - **`symbol`**
+ES6에 추가된 primitive 타입.  
+Symbol() 함수를 통해서만 생성할 수 있음!    
+-> 유니크한 값 만들어짐.   
+=> 대체로 객체의 프로퍼티로 쓰이게 됨.    
+(하나의 객체를 정의할 때, 프로퍼티의 키로 사용)
+
+<br>
+
+#### - **`배열`**
+
+let nameList: string[];
+
+해당 배열에 어떤 배열을 할당하거나,   
+push 함수등을 사용하여 값을 추가할 때는  
+위에서 명시한 타입의 Data 만 추가 가능!
+
+만약 여러 타입의 값을 넣어주고 싶다면, any[]로 만들어 줘야함!
+
+<br>
+
+#### - **`inline`** 타입? 형식?
+객체가 어떤 속성들로 구성되어지는 지를 명시  
+-> 별도의 타입을 정의하지 않고, 변수 선언과 동시에 인라인으로 정의할 수 O
+
+```
+let user1: { name: string, score: number };
+
+user1 = { //name과 score 프로퍼티 없는 객체 할당 불가!
+  color: 'red',
+  width: 20
+};
+
+user1 = {
+  name: 'jiwon',
+  score: 100
+}
+```
+
+-> 설정하고 나면, primitive 타입이나 다른 형태의? 객체 할당 불가!
+
+만약 매번 재사용되어야 하는 타입은 inline으로 정의하지 않고,   
+type alias나 interface나 class를 통해 타입을 정의할 수 있다!   
+
+<br>
+
+#### - **`tuple`**
+배열과 유사  
+원소의 갯수와 타입을 정의하는 것   
+-> 갯수와 타입이 모두 맞아야 함!
+
+```
+let tuple1: [number, string];
+let tuple2: [number, number, number];
+
+tuple1 = [1, 'hello'];
+tuple2 = [1, 2, 3];
+//tuple2 = [1, 2, '3']; //X
+
+```
+
+<b><br><br>
+
+∴ TS는 JS와 유사하게 6개의 primitive type과     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1개의 reference type에 대해 정의할 수 있고
+
+이 이외에도 **`any`** 타입이라는 최상위 타입이 존재하여 모든 타입의 값을 할당할 수 있다
+
+**`undefined`** 와 **`null`** 은 최하위 타입으로 상위 타입인 **`number`** , **`string`** 타입 변수들에 할당될 수 있다
+
+**`객체`** 타입은 primitive type을 제외한 타입을 객체 타입이라고 하며
+
+**`심볼`** 타입도 있고
+
+TS에서는 추가로 **`tuple`** 이라는 것도 제공한다
+</b>
+
+
+<br>
+<br>
+<br>
+<br>
+
  
