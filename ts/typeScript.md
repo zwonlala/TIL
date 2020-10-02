@@ -139,7 +139,7 @@ tsconfig.json이라는 TS 컴파일러 설정 파일 생성
 
 JSON 형태로 설정을 주게 됨
 
-```JSON
+```javascript
 {
   "include": ~~
   "exclude": ~~
@@ -152,7 +152,7 @@ JSON 형태로 설정을 주게 됨
 - "include"  
 compile 시 포함될 파일을 명시, 여러개의 파일 목록 줄 수 있음.    
   
-```JSON
+```javascript
 "include": [
   "src/**/*.ts" //src 폴더 안의 전체 TS 파일들
 ], 
@@ -163,7 +163,7 @@ compile 시 포함될 파일을 명시, 여러개의 파일 목록 줄 수 있�
 - "exclude"   
 compile 시 제외할 파일을 명시
 
-```JSON
+```javascript
 "exclude": [
   "node_modules" 
   //일반적으로 Node.js 기반으로 만들기 때문에 npm init -y 로 프로젝트 생성하고, 
@@ -178,7 +178,7 @@ compile 시 제외할 파일을 명시
 컴파일과 관련된 설정들    
 객체로 정의
 
-```JSON
+```javascript
 "compilerOptions": {
   "module": "commonjs",
   "rootDir": "src",
@@ -429,7 +429,7 @@ tuple2 = [1, 2, 3];
 <b><br><br>
 
 ∴ TS는 JS와 유사하게 6개의 primitive type과     
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1개의 reference type에 대해 정의할 수 있고
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1개의 reference type에 대해 정의할 수 있고
 
 이 이외에도 **`any`** 타입이라는 최상위 타입이 존재하여 모든 타입의 값을 할당할 수 있다
 
