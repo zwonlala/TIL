@@ -167,6 +167,56 @@ ReferenceError, 즉 hello2가 뭔지 아예모르고 있는 것!!!(undefined조�
 
 
 
+- 생성자 함수로 만드는 방법
+
+const hello = new Function();
+
+- function 과 new Function() 차이점
+...생략 송지원 https://www.fastcampus.co.kr/courses/200543/clips/# 00~57 다시 정리
+
+- arrow function
+() => {}
+
+es6에 새로 생긴 문법
+
+
+```javascript
+//arrow function를 만들어 이름이 hello1인 변수에 할당
+
+const hello1 = () => {
+  console.log('hello1');
+}
+//함수를 만들어서 변수에 넣어주는 형태!
+//선언적 방식으로는 쓸 수 없음(항상 익명함수!)
+
+
+
+/* 함수의 매개변수 */
+//매개변수가 하나일 때, 괄호 생략 가능
+
+const hello2 = (name) => { //일반적인 표현
+  console.log('hello2', name);
+}
+
+const hello2 = name => { //이런 방식도 사용 가능!
+  console.log('hello2', name);
+}
+
+const hello3 = (name, age) => { //매개변수가 2개 이상일땐, 항상 괄호 사용해야 함!
+  console.log('hello2', name, age);
+}
+
+
+
+/* 함수의 리턴 */
+
+const hello4 = name => {
+  return `hello4 ${name}`;
+};
+
+const hello4 = name => `hello5 ${name}`; //이렇게 간략하게 표현 가능.
+//만약 함수 바디에 리턴 문 말고 다른 로직이 있다면 중괄호 사용해야 함!
+```
 
 
 
