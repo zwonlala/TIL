@@ -1,8 +1,3 @@
-# 알고리즘 인강 
-- 1강 : [알고리즘과 입출력](https://github.com/zwonlala/TIL/blob/master/191015.md)
-- 2강 : [자료구조1_스택1](https://github.com/zwonlala/TIL/blob/master/191022.md), [자료구조1_스택2](https://github.com/zwonlala/TIL/blob/master/191023.md), [자료구조1_큐](https://github.com/zwonlala/TIL/blob/master/191029.md), [자료구조1_덱](https://github.com/zwonlala/TIL/blob/master/191029.md), [자료구조1_문자열](https://github.com/zwonlala/TIL/blob/master/191029.md) 
-- 3강 : [다아니믹 프로그래밍](https://github.com/zwonlala/TIL/blob/master/191107.md)
-
 
 191015.md : 한 줄 입력받기, 한 줄 전체를 입력받기, 인접행렬 입력 받는 경우
 
@@ -27,3 +22,50 @@
 191107.md : Dynamic Programming
 
 191107_2.md : boj1461문제, boj11736문제, boj11727문제, boj9095문제
+
+191108.md : boj11052문제, max/min 함수
+
+191112 : boj2193문제, Boj10844문제, Boj11057문제, Boj9465문제
+
+191113 : Boj2156문제, 세 값 이상의 min/max 구하는 법
+
+191118 : boj11053문제, Boj11055문제, Boj11722문제, Boj11054문제, Boj1912문제
+
+191119 : Boj2579문제
+
+//191127. : 우테코 이전 피드백 정리
+
+191130 : JAVA Code Convention
+
+//191201 : 우테코 프리코스 다른 사람 코드 보면서 모르는 거 정리 & 공부
+
+//191204 : 2차 우테코 프리코스 야구게임 피드백
+
+//191210 : 객체지향 생활 체조
+
+//191211 : 2차 우테코 프리코스 자동차 경주 게임 피드백
+
+//191218 : 2차 우테코 프리코스 블랙잭 피드백
+
+200117 : boj1699문제, Boj2133문제, Boj9461문제, Boj2225문제, Boj2011문제
+
+200206 : 나머지 연산, 최대공약수, 최소공배수, 진법 변환, 소수, 소인수분해, 팩토리얼
+
+200531 : 바킹독 00강_어캐공부할지
+
+200601 : 바킹독 01강_시간복잡도
+
+200618 : 바킹독 02강_STL, 표준입출력, 코드작성 팁
+
+200624 : 바킹독 03강_
+
+200709 : yarn.lock 용도
+
+200710 : FC Velopert 모던 JS 강의 정리 1장_변수와 상수, null과 undefined, 비교연산자, 템플릿 리터럴, 화살표 함수, 객체, 객체 비구조화 할당, 객체 안에 함수 넣기, Getter와 Setter 함수, 배열, 반복문(for of, for in), 배열 내장함수(forEach)
+
+200713 : FC Velopert 모던 JS 강의 정리 1장_배열 내장함수(map, indexof/findIndex/find, filter, splice/slice, shift/pop/unshift/push, concat, join, reduce)
+
+200720 : FC Velopert 모던 JS 강의 정리 1장_프로토타입과 클래스(객체생생자, prototype, 객체 생성자의 상속, class)
+
+
+200728 : FC Velopert react_useRef로 특정 DOM 선택하기, 배열 컨트롤1 (배열 렌더링), useRef로 컴포넌트 안의 변수 만들기, 배열 컨트롤2 (배열 항목 추가), 배열 컨트롤3 (배열 항목 삭제),  배열 컨트롤4 (배열 항목 수정)
