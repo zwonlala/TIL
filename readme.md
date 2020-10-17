@@ -75,3 +75,5 @@
 201013.md : css/box-model
 
 201014.md : css/font
+
+201016.md : js/알고 있으면 유용한 문법(Truthy/Falsy, 단축평가, 함수의 기본 파라미터, 조건문 더 스마트하게 쓰기, 비구조화 할당, spread, rest, scope, hoisting)
