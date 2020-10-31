@@ -483,6 +483,78 @@ Python3.6 이상부터 사용할 수 있는 문법(JS의 템플릿 리터럴과 
 ## 주요 라이브러리 문법 & 유의점
 </div>
 
+<div style="padding-left: 3%;"> 
+
+### - 내장함수
+</div>
+
+print(), input() ~ 기본 I/O.   
+sort() 정렬.   
+
+sum() : 입력으로 받은 리스트의 합을 계산하여 리턴    
+min() : 입력 받은 두개 이상의 값들 중 최소 값 리턴.  
+max() : 입력 받은 두개 이상의 값들 중 최대 값 리턴.  
+eval() : 수학수식을 문자열 형식으로 입력받아 계산한 결과 number type으로 리턴??    
+sorted() : iterable 객체가 들어 왔을 때, 정렬된 결과 반환(<-> iterable 객체의 sort 함수와 다름!).   
+			key 속성으로 정렬 기준 명시 가능 ~> 리스트 원소로 리스트나 튜플이 들어왔을. 경우    
+			reverse 속성으로 (reverse=True) 설정하면 내림차순으로 정렬.    
+
+송지원 페이지 452 첫번째 예제
+
+
+<div style="padding-left: 3%;"> 
+
+### - itertools
+</div>
+
+python에서 반복되는 형태의 data 처리하는 기능 제공하는 라이브러리.  
+(순열과 조합 lib 제공)
+
+permutations(순열) -> tuple로 리턴 & 객체 초기화 이후에는 리스트 자료형으로 변환하여 사용
+combinations(조합)
+product(permutations && 반복 허용)
+combinations_with_replace
+
+
+<div style="padding-left: 3%;"> 
+
+### - heapq
+</div>
+
+힙(Heap) 기능
+~> 다익스트라 최단경로 알고리즘 등 우선순위 큐 기능을 구현하고자 할때 사용
+~> Py는 최소 힙(Min Heap)으로 구성
+
+- heapq.heappush() : 원소 삽입
+- heapq.heappop() : 원소 삭제
+
+Ex)힙 정렬을 heapq를 통해 구현하는 예제
+송지원 페이지 455 첫번째 예제
+
+Ex)Py에서 최대 힙 사용하는 법
+-> - 부호 처리 했다가 다 꺼내고 난 후 복구
+송지원 페이지 455 마지막 예제
+
+
+<div style="padding-left: 3%;"> 
+
+### - bisect
+</div>
+
+송지원 456 부터 다시 정리~
+
+
+<div style="padding-left: 3%;"> 
+
+### - collections
+</div>
+
+
+
+<div style="padding-left: 3%;"> 
+
+### - math
+</div>
 
 
 
