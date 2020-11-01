@@ -314,7 +314,7 @@ let booleanValue: boolean;
 let undefinedValue: undefined;
 let nullValue: null;
 let objectValue: object;
-let symbolValue: Symbol;
+let symbolValue: symbol;
 ```
 
 #### - **`number`**
@@ -367,7 +367,7 @@ objectValue = new String(33); //O (∵ 33 문자열이 아닌 객체!)
 
 #### - **`symbol`**
 ES6에 추가된 primitive 타입.  
-Symbol() 함수를 통해서만 생성할 수 있음!    
+**`Symbol()`** 함수를 통해서만 생성할 수 있음!    
 -> 유니크한 값 만들어짐.   
 => 대체로 객체의 프로퍼티로 쓰이게 됨.    
 (하나의 객체를 정의할 때, 프로퍼티의 키로 사용)
