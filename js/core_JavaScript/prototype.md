@@ -37,7 +37,7 @@ var Person = function (name) {
     this._name = name;
 };
 
-Persion.prototype.getName = function() {
+Person.prototype.getName = function() {
     return this._name;
 }
 ```
@@ -47,7 +47,7 @@ Persion.prototype.getName = function() {
 그럼 Person의 인스턴스는 \_\_proto__ 프로퍼티를 통해 getName() 함수를 호출 할 수 있음
 
 ```javascript
-var suzi = new Persion('Suzi');
+var suzi = new Person('Suzi');
 suzi.__proto__.getName();    //undefined
 ```
 
@@ -55,7 +55,7 @@ suzi.__proto__.getName();    //undefined
 <br>
 
 
-Instance의 \_\_proto__ 가 Constructor의 prototype 프로퍼티를 참조하므로 둘은 같은 객체를 바라봄
+instance의 \_\_proto__ 가 Constructor의 prototype 프로퍼티를 참조하므로 둘은 같은 객체를 바라봄
 
 ```javascript
 Person.prototype === suzi.__proto__ 	//true
@@ -73,18 +73,18 @@ Person.prototype === suzi.__proto__ 	//true
 <br>
 <br>
 
-그렇다면 원하는 결과를 얻기 위해 this를 Instance로 설정하는 방법은 \_\_proto__ 없이 인스턴스에서 바로 메소드를 사용하는 것입니다
+그렇다면 원하는 결과를 얻기 위해 this를 instance로 설정하는 방법은 \_\_proto__ 없이 인스턴스에서 바로 메소드를 사용하는 것입니다
 
 
 ```javascript
-var suzi = new Persion('Suzi');
+var suzi = new Person('Suzi');
 suzi.getName();    // Suzi
 
-var iu = new Persion('Jieun');
+var iu = new Person('Jieun');
 iu.getName();      // Jieun
 ```
 
-위와 같이 실행할 수 있는 이유는 바로 \_\_proto__ 생략 가능한 프로퍼티이기 때문입니다.
+위와 같이 실행할 수 있는 이유는 바로 \_\_proto__가 생략 가능한 프로퍼티이기 때문입니다.
 
 즉,
 
@@ -119,7 +119,8 @@ dunder는 'double underscore'의 줄임말
 자바스크립트 명세에는 \_\_proto__가 아닌 [[prototype]]로 정의되어 있으며,   
 \_\_proto__ 프로퍼티는 단지 브라우저에서 [[prototype]]을 구현한 대상이고 권장되는 방식이 아닙니다.   
 이 문서에서는 이해하기 쉽게 하기 위하여 설명에 \_\_proto__ 프로퍼티를 사용하였으며,   
-실무에서 사용할 때는 Object.getPrototypeOf(instance), Refelect.getPrototypeOf(instance), Object.create()등을 이용하시기 바랍니다.
+실무에서 사용할 때는 Object.getPrototypeOf(instance), Refelect.getPrototypeOf(instance), Object.create()등을 이용하시기 바랍니다.   
+참고 : ["프로토타입 상속" 문서 '__proto__는 [[Prototype]]용 getter·setter입니다.' 부분](https://ko.javascript.info/prototype-inheritance)
 
 
 <br>
