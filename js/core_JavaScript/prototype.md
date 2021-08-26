@@ -134,6 +134,22 @@ dunder는 'double underscore'의 줄임말
 
 ### constructor 프로퍼티
 
+생성자 함수의 프로퍼티인 Prototype 객체 내부에는 Constructor라는 프로퍼티가 있습니다.
+이 프로퍼티는 원래의 생성자 함수(자기 자신)를 참조함.
+인스턴스로부터 그 원형이 무엇인지 알 수 있는 수단이기 때문에 인스턴스와의 관계에 있어서 필요한 정보임
+
+```javascript
+var arr = [1, 2];
+
+Array.prototype.constructor === Array	// true
+arr.__proto__.constructor === Array 	// true
+arr.constructor === Array
+
+var arr2 = new arr.constructor(3, 4);
+console.log(arr2);		// [3, 4]
+```
+
+
 <br>
 <br>
 <br>
@@ -145,6 +161,9 @@ dunder는 'double underscore'의 줄임말
 
 ### 메소드 오버라이드
 
+인스턴스에서 생성자 함수의 prototype 프로퍼티를 참조하는 \_\_proto__를 생략하면, 인스턴스는 Prototype에 정의된 프로퍼티나 메소드를 자신의 것 처럼 사용할 수 있다고 위에서 설명을 하였음
+
+그럼 만약 인스턴스에서 동일한 이름의 프로퍼티나 메소드를 가지고 있는 상황이라면 어떨까요?
 
 ### 프로토타입 체인
 
