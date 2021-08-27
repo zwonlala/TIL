@@ -161,11 +161,68 @@ console.log(arr2);		// [3, 4]
 
 ### 메소드 오버라이드
 
-인스턴스에서 생성자 함수의 prototype 프로퍼티를 참조하는 \_\_proto__를 생략하면, 인스턴스는 Prototype에 정의된 프로퍼티나 메소드를 자신의 것 처럼 사용할 수 있다고 위에서 설명을 하였음
+인스턴스에서 생성자 함수의 prototype 프로퍼티를 참조하는 \_\_proto__를 생략하면,   
+인스턴스는 Prototype에 정의된 프로퍼티나 메소드를 자신의 것 처럼 사용할 수 있다고 위에서 설명을 하였음
 
 그럼 만약 인스턴스에서 동일한 이름의 프로퍼티나 메소드를 가지고 있는 상황이라면 어떨까요?
 
+```javascript
+var Person = function (name) {
+  this.name = name;
+};
+Person.prototype.getName = function () {
+  return this.name;
+};
+
+var iu = new Persion('지금');
+iu.getName = function () {
+  return '바로 ' + this.name;
+};
+
+console.log(iu.getName());	// 바로 지금
+```
+
+위 예제의 실행 결과를 보면, iu.__proto__.getName이 아닌, iu 객체에 있는 getName 메소드가 호출되었음.   
+이와 같은 현상을 '메소드 오버라이드'라고 함.
+
+메소드 위에 메소드를 덮어 씌웠다는 표현으로, 원본을 제거하고 다른 대상으로 교체하는 것이 아닌 원본이 그대로 있는 상태에서 다른 대상을 그 위에 얹는 개념임
+
+자바스크립트 엔진이 getName이라는 메소드를 찾는 방식은 먼저 실행 컨텍스트의 프로퍼티를 검색하고,
+없으면 그 다음으로 가까운 대상인 __proto__를 검색하는 순서로 진행합니다
+
+
 ### 프로토타입 체인
+
+바로 위에서 메소드 오버라이드의 개념을 알아보았습니다.
+
+그럼 다음 예제를 한번 살펴보겠습니다
+
+```javascript
+var arr = new Array(1, 2); //[1, 2]
+arr.push(3); //[1, 2, 3]
+arr.toString(); // 1, 2, 3
+```
+
+Array() 생성자 함수를 사용하여 배열을 하나 정의하고, 
+push() 함수와 toString() 함수를 사용하였습니다.
+
+arr 인스턴스에 push() 함수와 toString()을 정의하지 않았지만, 위와 같이 사용할 수 있는 이유는 위에서 알아본대로 자바스크립트 엔진이 메소드를 찾는 방식이 프로퍼티를 검색하고, 없으면 그 다음으로 가까운 대상인 __proto__를 검색하는 순서로 진행하기 때문입니다.
+
+위 예제에서 console.dir(arr); 명령을 실행해보면 push() 함수와 toString() 함수가 어디에 정의되어 있는지 확인할 수 있습니다
+
+우리가 사용했던 ~~~ 함수들은 사실
+
+```javascript
+arr(.__proto__).push(3);
+arr(.__proto__)(.__proto__).toString();
+```
+
+위와 같이 Array.prototype에 정의된 push() 함수와
+Object.prototype에 정의된 toString() 함수를 호출한 것입니다. -> 이거 틀린 설명...!
+
+어떤 데이터의 __proto__ 프로퍼티 내부에 다시 __proto__ 프로퍼티가 연쇄적으로 이어진 것을 프로토타입 체인(prototype chain)이라 하고,
+이 체인을 따라가며 검색하는 것을 프로토타입 체이닝(prototype chaining)이라고 합니다.
+
 
 ### 객체 전용 메소드의 예외사항
 
