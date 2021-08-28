@@ -234,8 +234,7 @@ push() 함수와 hasOwnProperty() 함수를 사용하였습니다.
 
 위 예제에서 `console.dir(arr);` 명령을 실행해보면 `push()` 함수와 `hasOwnProperty()` 함수가 어디에 정의되어 있는지 확인할 수 있습니다
 
-[사진 추가]
-
+![console.dir(arr)의 결과](https://user-images.githubusercontent.com/13375734/131215778-14d2fa75-2732-4fce-ac7f-f5b2da72e58f.png)
 <br>
 <br>
 
