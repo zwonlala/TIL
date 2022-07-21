@@ -1,6 +1,6 @@
-# Black Coffee 스터디 Step 1
+# [Black Coffee 스터디](https://github.com/blackcoffee-study/moonbucks-menu) Step 1
 
-## 🎯 step1 요구사항 - 돔 조작과 이벤트 핸들링으로 메뉴 관리하기
+## [🎯 step1 요구사항 - 돔 조작과 이벤트 핸들링으로 메뉴 관리하기](https://github.com/blackcoffee-study/moonbucks-menu#-step1-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD---%EB%8F%94-%EC%A1%B0%EC%9E%91%EA%B3%BC-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%ED%95%B8%EB%93%A4%EB%A7%81%EC%9C%BC%EB%A1%9C-%EB%A9%94%EB%89%B4-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0)
 
 - [x] 에스프레소 메뉴에 새로운 메뉴를 확인 버튼 또는 엔터키 입력으로 추가한다.
   - [x] 메뉴가 추가되고 나면, input은 빈 값으로 초기화한다.
