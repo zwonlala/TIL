@@ -57,7 +57,7 @@
 	- [빈번하게 사용될 selector 기반으로 DOM 에서 원하는 Element를 구하는 로직을 이렇게 함수화 + 에러처리까지 같이 묶어놓은 구조]()
 - [이시현](https://github.com/blackcoffee-study/moonbucks-menu/pull/261)
 - [이승효](https://github.com/blackcoffee-study/moonbucks-menu/pull/248)
-
+	- 사용자 정의 컴포넌트
 
 _다른 팀_
 
