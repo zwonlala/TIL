@@ -35,12 +35,18 @@
 - 👌 [[10분 테코톡] 🍺 서니의 프론트엔드 성능 측정](https://www.youtube.com/watch?v=A6J74xLWqYg&t=634s&ab_channel=%EC%9A%B0%EC%95%84%ED%95%9CTech)
 
 
-- [20190129 김명신 youtube "자바스크립트 성능 최적화 기법"](https://www.youtube.com/watch?v=9MZl8Uq9Gmw&ab_channel=%EA%B9%80%EB%AA%85%EC%8B%A0)   
-
-- [20210908 Akamai Technologies youtube "웹 프론트 엔드 최적화를 위한 다양한 성능 개선 방법과 CDN의 소개"](https://www.youtube.com/watch?v=9Sq9y4ljmPI&ab_channel=AkamaiTechnologies)
+- 👌 [20190129 김명신 youtube "자바스크립트 성능 최적화 기법"](https://www.youtube.com/watch?v=9MZl8Uq9Gmw&ab_channel=%EA%B9%80%EB%AA%85%EC%8B%A0)
+	- 뒷 부분에 코드 베이스로 성능 최적화를 비교해주는 섹션이 있어 좋음
+	- 다만 ~~2019년도~~(OMG 2019 년도 영상도 아닌 2014년도 영상임;;) 영상이라 현재의 기술 스택인 React.js 가 아닌 jQuery 기반 소스 코드 설명임.... OTL
+	- 브라우져도 이전 IE 기반 설명이라 현재와 다른 부분도 있을 수 있음
+	- 라이트한 설명 느낌이라 초반에 개략적인 개념잡기 좋은듯
 
 
 - [20190214 NHN Cloud youtube "[2018] 프런트엔드 성능 최적화"](https://www.youtube.com/watch?v=G1IWq2blu8c&ab_channel=NHNCloud)
+	-> https://www.youtube.com/watch?v=G1IWq2blu8c&t=600s&ab_channel=NHNCloud (600초까지 들음)
+
+- [20210908 Akamai Technologies youtube "웹 프론트 엔드 최적화를 위한 다양한 성능 개선 방법과 CDN의 소개"](https://www.youtube.com/watch?v=9Sq9y4ljmPI&ab_channel=AkamaiTechnologies)
+
 
 	- [https://www.slideshare.net/NHNFORWARD/2018-130108045](https://www.slideshare.net/NHNFORWARD/2018-130108045)
 
