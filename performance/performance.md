@@ -42,13 +42,76 @@
 	- 라이트한 설명 느낌이라 초반에 개략적인 개념잡기 좋은듯
 
 
-- [20190214 NHN Cloud youtube "[2018] 프런트엔드 성능 최적화"](https://www.youtube.com/watch?v=G1IWq2blu8c&ab_channel=NHNCloud)
-	-> https://www.youtube.com/watch?v=G1IWq2blu8c&t=600s&ab_channel=NHNCloud (600초까지 들음)
+- 👌 [20190214 NHN Cloud youtube "[2018] 프런트엔드 성능 최적화"](https://www.youtube.com/watch?v=G1IWq2blu8c&ab_channel=NHNCloud)
+	- 강의 슬라이드 : [https://www.slideshare.net/NHNFORWARD/2018-130108045](https://www.slideshare.net/NHNFORWARD/2018-130108045)
+
+	<details>
+	<summary>강의 정리본</summary>
+
+
+		FE 최적화에는 크게 두가지가 있음
+		  1. 로딩 최적화: 리소스를 어떻게 최적화?
+		  2. 렌더링 최적화
+
+
+		1. 로딩 최적화
+
+			1) 브라우져 기준 최적화
+				1)) JS 로드시점 최적화
+				2)) CSS 최적화
+			
+			2) 사용자 기준 최적화
+
+				W3C에 "페인트 타이밍 이벤트"
+				
+				***(중요) "First Meaningful Piant" 시점을 보다 앞당겨야 함. => 사용자 기준 최적화
+
+
+				Ex) SSR - SPA 로 많이들 개발.
+						F.M.P를 앞당기기 위해 쓰는 방식이 SSR
+						(브라우져가 HTML을 요청하는 시점에 바로 HTML을 생성해서 응답으로 내려보내고, 브라우져가 의미있는 콘텐르를 로딩.)
+
+				SSR vs 프리렌더러
+
+					- SSR : HTML 요청한 런타임 시점에, HTML & CSS 생성 후, 응답 내려보냄
+
+					- 프리렌더러 : 런타임이 아닌 빌드타임 / webpack을 쓰게되면 HTML webpack 플러그인과 함께 사용
+					  (webpack pre-render-loader)
+
+					  	-> DOM Content Loaded 가 살짝 느려지지만,
+						   사용자 관점 최적화에서는 의미 없는 것이다. (∵ 사용자에게 의미있는 콘텐츠를 이미 보여주고 있어서)
+
+			3) PWA 사례
+
+		
+
+		2. 렌더링 최적화
+			1) 레이아웃 쓰레싱
+
+				fps가 30 정도로 살짝 버벅 거림
+				=> "강제 동기 Layout"이 발생하였기 때문
+
+				"강제 동기 Layout" ... Critical Rendering Path ... DOM을 변경하지 않음에도 불구하고 LAYOUT 과정을 강제로 타게 되어 강제 동기 Layout이라고 함
+
+				Ex) 특정 DOM Element의 프로퍼티를 읽기만 해도 이 과정이 발생됨..
+
+				이 "강제 동기 Layout"이 매우 빈번하게 발생한 경우 "레이아웃 쓰레싱" 이라고 한다!
+
+			2) Virtual DOM
+
+			3) 웹 워커
+
+	</details>
+
+- 👌 [[NHN FORWARD 2021] Lighthouse 성능 지표를 사용한, '웹 애플리케이션 성능 측정 자동화 모듈' 개발기](https://www.youtube.com/watch?v=34T0IU18R6c&ab_channel=NHNCloud)
+	- 프론트 엔드 최적화를 통해 성능을 향상 시키는 것도 중요하지만, 
+		- 향상된 성능을 계속 유지하는 것
+		- 성능이 안좋아 질 경우 어느 시점에 안좋아졌는지
+		- 성능의 변화(개선 혹은 악화?) 추이를 보는 것
+		도 중요한 것 같은데 위 고민에 대한 한 개발자의 개발기를 보는 영상이라 매우 좋았음
+
 
 - [20210908 Akamai Technologies youtube "웹 프론트 엔드 최적화를 위한 다양한 성능 개선 방법과 CDN의 소개"](https://www.youtube.com/watch?v=9Sq9y4ljmPI&ab_channel=AkamaiTechnologies)
-
-
-	- [https://www.slideshare.net/NHNFORWARD/2018-130108045](https://www.slideshare.net/NHNFORWARD/2018-130108045)
 
 
 - the RED "김태곤" 
@@ -57,8 +120,6 @@
 	- 3) 애니메이션 성능
 	- 4) JavaScript 코드의 성능
 
-
-- [[NHN FORWARD 2021] Lighthouse 성능 지표를 사용한, '웹 애플리케이션 성능 측정 자동화 모듈' 개발기](https://www.youtube.com/watch?v=34T0IU18R6c&ab_channel=NHNCloud)
 
 - [[프론트엔드] 초기 로딩 최적화 하기(GZip 이용)](https://www.youtube.com/watch?v=qaLCplPCy3c&ab_channel=HoYongLim) ?? 뭐하는 건지 잘 모르겠네...
 
