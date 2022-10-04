@@ -109,6 +109,7 @@
 		- 성능이 안좋아 질 경우 어느 시점에 안좋아졌는지
 		- 성능의 변화(개선 혹은 악화?) 추이를 보는 것
 		도 중요한 것 같은데 위 고민에 대한 한 개발자의 개발기를 보는 영상이라 매우 좋았음
+		- [강의 자료](https://rlqof7ogm.toastcdn.net/references/2021_session_13.pdf)
 
 
 - [20210908 Akamai Technologies youtube "웹 프론트 엔드 최적화를 위한 다양한 성능 개선 방법과 CDN의 소개"](https://www.youtube.com/watch?v=9Sq9y4ljmPI&ab_channel=AkamaiTechnologies)
@@ -117,6 +118,7 @@
 - the RED "김태곤" 
 	- 1) 프론트엔드 개발자가 왜 성능을 신경써야하나요?
 	- 2) 코드 바깥의 성능
+	https://fastcampus.co.kr/courses/202919/clips/ 34:33/50:04
 	- 3) 애니메이션 성능
 	- 4) JavaScript 코드의 성능
 
@@ -125,4 +127,5 @@
 
 
 
-
+- 문서
+	- 👌 [Toast UI "성능 최적화"](https://ui.toast.com/fe-guide/ko_PERFORMANCE#%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94)
