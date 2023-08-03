@@ -6,9 +6,9 @@
 
 ## Chapt 1. 타입스크립트 알아보기
 
-- [ ] [item 1 "타입스크립트와 자바스크립트 관계 이해하기"]()
-- [ ] [item 2 "타입스크립트 설정 이해하기"]()
-- [ ] [item 3 "코드 생성과 타입이 관계없음을 이해하기"]()
+- [ ] [item 1 "타입스크립트와 자바스크립트 관계 이해하기"](https://github.com/zwonlala/TIL/blob/master/ts/effective_typescript/item01.md)
+- [ ] [item 2 "타입스크립트 설정 이해하기"](https://github.com/zwonlala/TIL/blob/master/ts/effective_typescript/item02.md)
+- [ ] [item 3 "코드 생성과 타입이 관계없음을 이해하기"](https://github.com/zwonlala/TIL/blob/master/ts/effective_typescript/item03.md)
 - [ ] [item 4 "타입"]()
 
 &nbsp;
